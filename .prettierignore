@@ -1,3 +1,6 @@
-# Ignore artifacts:
+node_modules
+bun.lock
 build
 coverage
+.husky/_
+src/infrastructure/database/migrations/meta

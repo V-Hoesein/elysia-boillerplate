@@ -21,8 +21,16 @@ export default defineConfig([
   {
     files: ['**/*.{ts,mts,cts}'],
     extends: [tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': 'error',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
